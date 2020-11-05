@@ -13,7 +13,7 @@
   authorized_key: user={{main_user}} key=https://github.com/{{ gh_pubkey_user }}.keys
 
 - name: Install sudo
-  pacman: name=sudo state=present
+  apt: name=sudo state=present
 
 - name: Add {{main_user}} user to sudoers
   lineinfile:

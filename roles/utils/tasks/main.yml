@@ -1,8 +1,9 @@
 ---
 - name: Install user utilities
-  action: pacman name={{item}} state=installed
-  with_items:
-       - unzip
-       - rsync
-       - htop
-       - vim
+  apt:
+    name:
+      - unzip
+      - rsync
+      - htop
+      - vim
+    state: present

@@ -1,6 +1,6 @@
 ---
 - name: Install packages
-  action: pacman name={{item}} state=installed
+  action: apt name={{item}} state=installed
   with_items:
        - netctl
        - wpa_actiond
